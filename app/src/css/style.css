@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  transition: 0.5s all;
+}
+
+@font-face {
+  font-family: Bondriand;
+  src: url(../fonts/Bondrians.otf);
+}
+@font-face {
+  font-family: MarkBold;
+  src: url(../fonts/Mark-Black.ttf);
+}
+h1, h2, h3, h4, thead tr th, span, a {
+  font-family: Bondriand;
+}
+
+p, article, tbody tr td {
+  font-family: MarkBold;
+}
+
+.mainCentral {
+  width: 1080px;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+header {
+  background-color: #2B2B2B;
+  text-align: center;
+  padding: 2em;
+  box-sizing: content-box;
+}
+header .contentLogo figure img {
+  max-width: 200px;
+}
+header .contentHeader {
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+header .contentHeader h1 {
+  padding: 1em;
+}
+header .contentHeader span {
+  font-size: 2em;
+}
+
+.mainPrecios .containerPrecios .table_precios {
+  width: 100%;
+  text-align: center;
+}
+.mainPrecios .containerPrecios .table_precios thead {
+  text-align: center;
+  margin: 0 auto;
+}
+.mainPrecios .containerPrecios .table_precios thead tr {
+  background-color: #DB9B4A;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.mainPrecios .containerPrecios .table_precios thead tr th {
+  padding: 0.5em 1em;
+}
+.mainPrecios .containerPrecios .table_precios tbody tr td {
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+.mainPrecios .containerPrecios .table_precios tbody tr td:last-child {
+  color: #DB9B4A;
+  font-weight: bold;
+}
+.mainPrecios .containerPrecios .table_precios tbody tr:nth-child(odd) {
+  background-color: #ededed;
+}
+.mainPrecios .containerPrecios .table_precios tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #2B2B2B;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .contentSocialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerFormCreate {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+.containerFormCreate .contentHeaderCreate {
+  background-color: #2B2B2B;
+  color: white;
+  height: 100%;
+  padding: 5em;
+}
+.containerFormCreate .contentHeaderCreate h1 {
+  padding: 1em 0;
+  font-size: 2em;
+}
+.containerFormCreate .contentHeaderCreate p {
+  padding: 1em 0;
+}
+.containerFormCreate form {
+  background-color: rgb(232, 232, 232);
+  width: 70%;
+  padding: 2em 5em;
+}
+.containerFormCreate form input, .containerFormCreate form select {
+  display: block;
+  padding: 0.5em 1em;
+  border: none;
+  border-bottom: 1em;
+  margin: 1em 0;
+  width: 100%;
+}
+.containerFormCreate form input::focus {
+  border: 1px solid #DB9B4A;
+}
+.containerFormCreate form input::placeholder {
+  text-transform: uppercase;
+  color: #2B2B2B;
+}
+.containerFormCreate form input[type=submit] {
+  background-color: #DB9B4A;
+  color: #2B2B2B;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.containerFormCreate form input[type=submit]:hover {
+  background-color: #2B2B2B;
+  color: #DB9B4A;
+}
+
+.containerButton {
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+}
+.containerButton a {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #DB9B4A;
+  color: #2B2B2B;
+  padding: 0.5em 2em;
+  font-size: 1.2em;
+}
+.containerButton a:hover {
+  background-color: #2B2B2B;
+  color: #DB9B4A;
+}
+
+/*# sourceMappingURL=style.css.map */
