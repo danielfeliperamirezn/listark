@@ -1,33 +1,37 @@
 <?php
 
-// Include the config file
-require_once __DIR__ . '/../config.php';
+    include_once '../config.php';
 
-// Create a new UpdateController object
-class UpdateController
-{
-    // Get the database connection
-    protected $db;
+    $id = $_POST['id'];
+    $codigo_producto = $_POST['codigo_producto'];
+    $nombre_producto = $_POST['nombre_producto'];
+    $linea_producto = $_POST['linea_producto'];
+    $categoria_producto = $_POST['categoria_producto'];
+    $precio = $_POST['precio'];
 
-    // Constructor
-    public function __construct()
-    {
-        // Get the database connection
-        $this->db = require_once __DIR__ . '/../config.php';
+    // Prepare the update statement
+    $stmt = $db->prepare('UPDATE productos SET codigo_producto = :codigo_producto, nombre_producto = :nombre_producto, linea_producto = :linea_producto, categoria_producto = :categoria_producto, precio = :precio WHERE id = :id');
+
+    // Bind the values to the parameters
+    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':codigo_producto', $codigo_producto);
+    $stmt->bindParam(':nombre_producto', $nombre_producto);
+    $stmt->bindParam(':linea_producto', $linea_producto);
+    $stmt->bindParam(':categoria_producto', $categoria_producto);
+    $stmt->bindParam(':precio', $precio);
+
+    // Execute the statement
+    $stmt->execute();
+
+    // Check if the statement was successful
+    if ($stmt->rowCount() > 0) {
+        // The statement was successful
+        echo 'El producto se actualizó correctamente.';
+        echo "<script type='text/javascript'>
+            window.location='../views/create.php';
+        </script>";
+    } else {
+        // The statement was not successful
+        echo 'Hubo un error al actualizar el producto.';
     }
-
-    // Update action
-    public function update()
-    {
-        // Get the id, name and email from the form
-        $id = $_GET['id'];
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-
-        // Update the record in the database
-        $query = $this->db->query('UPDATE users SET name = ?, email = ? WHERE id = ?', [$name, $email, $id]);
-
-        // Redirect the user to the index page
-        header('Location: index.php');
-    }
-}
+?>

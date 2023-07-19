@@ -1,13 +1,18 @@
-const appJS = {};
+// let appJS = {
 
-(function () {
+//     start:() => {
+//         document.addEventListener("DOMContentLoaded", function(event){
+//             appJS.UpdateInformation();
+//         })
+//     },
 
-    appJS.PopUpRegisterForm = function() {
-        alert("Registro realizado con éxito");
-    }
+//     UpdateInformation:() => {
+//         let actualizar = document.getElementsByClassName("btnUpdate");
+//         actualizar.addEventListener("click", function() {
+//             alert("Editar");
+//         })
+//     }
 
-}) ();
+// }
 
-$(function() {
-    
-});
+// appJS.start();

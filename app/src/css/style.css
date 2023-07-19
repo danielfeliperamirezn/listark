@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: content-box;
-  transition: 0.5s all;
 }
 
 @font-face {
@@ -13,7 +12,36 @@
   font-family: MarkBold;
   src: url(../fonts/Mark-Black.ttf);
 }
-h1, h2, h3, h4, thead tr th, span, a {
+.type {
+  padding: 1em;
+  background-color: #2B2B2B;
+  font-size: 1em;
+  color: white;
+  text-align: center;
+}
+.type h2 {
+  font-size: 2em;
+}
+
+.btnUpdate {
+  background-color: #DB9B4A;
+  color: #2B2B2B;
+  padding: 0.5em 2em;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btnDelete {
+  background-color: #2B2B2B;
+  color: #DB9B4A;
+  padding: 0.5em 2em;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, thead tr th, span, a, button {
   font-family: Bondriand;
 }
 
@@ -47,34 +75,43 @@ header .contentHeader span {
   font-size: 2em;
 }
 
-.mainPrecios .containerPrecios .table_precios {
+.ContainerListPrecio, .containerCreateProduct {
+  padding: 1em;
+}
+
+.containerCreateProduct .containerButton a {
+  display: block;
+  margin: 1em;
+}
+
+.mainPrecios .containerPrecios .table_precios, .ContainerListPrecio .containerPrecios .table_precios {
   width: 100%;
   text-align: center;
 }
-.mainPrecios .containerPrecios .table_precios thead {
+.mainPrecios .containerPrecios .table_precios thead, .ContainerListPrecio .containerPrecios .table_precios thead {
   text-align: center;
   margin: 0 auto;
 }
-.mainPrecios .containerPrecios .table_precios thead tr {
+.mainPrecios .containerPrecios .table_precios thead tr, .ContainerListPrecio .containerPrecios .table_precios thead tr {
   background-color: #DB9B4A;
   text-transform: uppercase;
   font-size: 1.5em;
 }
-.mainPrecios .containerPrecios .table_precios thead tr th {
+.mainPrecios .containerPrecios .table_precios thead tr th, .ContainerListPrecio .containerPrecios .table_precios thead tr th {
   padding: 0.5em 1em;
 }
-.mainPrecios .containerPrecios .table_precios tbody tr td {
+.mainPrecios .containerPrecios .table_precios tbody tr td, .ContainerListPrecio .containerPrecios .table_precios tbody tr td {
   padding: 1em 2em;
   text-transform: uppercase;
 }
-.mainPrecios .containerPrecios .table_precios tbody tr td:last-child {
+.mainPrecios .containerPrecios .table_precios tbody tr td:last-child, .ContainerListPrecio .containerPrecios .table_precios tbody tr td:last-child {
   color: #DB9B4A;
   font-weight: bold;
 }
-.mainPrecios .containerPrecios .table_precios tbody tr:nth-child(odd) {
+.mainPrecios .containerPrecios .table_precios tbody tr:nth-child(odd), .ContainerListPrecio .containerPrecios .table_precios tbody tr:nth-child(odd) {
   background-color: #ededed;
 }
-.mainPrecios .containerPrecios .table_precios tbody tr:nth-child(even) {
+.mainPrecios .containerPrecios .table_precios tbody tr:nth-child(even), .ContainerListPrecio .containerPrecios .table_precios tbody tr:nth-child(even) {
   background-color: #ffffff;
 }
 
@@ -91,12 +128,14 @@ footer .contentSocialMedia {
   justify-content: center;
 }
 
+.containerContentCreate {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .containerFormCreate {
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
   margin: 0 auto;
   box-sizing: content-box;
 }
@@ -104,10 +143,9 @@ footer .contentSocialMedia {
   background-color: #2B2B2B;
   color: white;
   height: 100%;
-  padding: 5em;
 }
 .containerFormCreate .contentHeaderCreate h1 {
-  padding: 1em 0;
+  padding: 1em 0 0.2em;
   font-size: 2em;
 }
 .containerFormCreate .contentHeaderCreate p {
@@ -115,8 +153,7 @@ footer .contentSocialMedia {
 }
 .containerFormCreate form {
   background-color: rgb(232, 232, 232);
-  width: 70%;
-  padding: 2em 5em;
+  padding: 3em;
 }
 .containerFormCreate form input, .containerFormCreate form select {
   display: block;
@@ -145,10 +182,15 @@ footer .contentSocialMedia {
   color: #DB9B4A;
 }
 
+.containerSectionUpdate .containerButton {
+  padding: 2em 0;
+}
+.containerSectionUpdate .containerButton a {
+  margin: 1em;
+}
+
 .containerButton {
   text-align: center;
-  padding: 1em;
-  margin: 1em;
 }
 .containerButton a {
   text-align: center;
@@ -157,11 +199,61 @@ footer .contentSocialMedia {
   background-color: #DB9B4A;
   color: #2B2B2B;
   padding: 0.5em 2em;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
   font-size: 1.2em;
 }
 .containerButton a:hover {
   background-color: #2B2B2B;
   color: #DB9B4A;
+}
+
+.containerContentUpdate .headerUpdateProduct {
+  text-align: center;
+  padding: 2em;
+}
+.containerContentUpdate .headerUpdateProduct h2 {
+  font-size: 3em;
+}
+
+.ContainerListPrecioUpdate {
+  background-color: #ededed;
+}
+
+.containerFormUpdate {
+  padding: 1em;
+}
+.containerFormUpdate .containerModalEdit form {
+  background-color: #ededed;
+  text-align: center;
+}
+.containerFormUpdate .containerModalEdit form input, .containerFormUpdate .containerModalEdit form select {
+  padding: 1em;
+  border: none;
+}
+.containerFormUpdate .containerModalEdit form button {
+  background-color: #DB9B4A;
+  color: #2B2B2B;
+  padding: 0.5em 2em;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+}
+.containerFormUpdate .containerModalEdit form button:hover {
+  background-color: #2B2B2B;
+  color: #DB9B4A;
+}
+
+.contentLabel {
+  padding: 1em;
+  background-color: #2B2B2B;
+  color: #DB9B4A;
+}
+.contentLabel label {
+  padding: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    transition: .5s all;
 }
 
 $colorPrincipal:  #2B2B2B;
@@ -17,13 +16,39 @@ $colorSecundario: #DB9B4A;
     src: url(../fonts/Mark-Black.ttf);
 }
 
-@mixin btnRikatas {
+@mixin btnRikatas() {
     background-color: $colorSecundario;
     color: #2B2B2B;
     padding: .5em 2em;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.type {
+    padding: 1em;
+    background-color: $colorPrincipal;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    h2 {
+        font-size: 2em
+    }
+}
+// btn
+
+.btnUpdate {
+    @include btnRikatas();
+}
+.btnDelete {
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    padding: .5em 2em;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-h1, h2, h3, h4, thead tr th, span, a {
+h1, h2, h3, h4, thead tr th, span, a, button {
     font-family: Bondriand;
 }
 p, article, tbody tr td {
@@ -57,7 +82,21 @@ header {
         }
     }
 }
-.mainPrecios {
+
+.ContainerListPrecio, .containerCreateProduct {
+    padding: 1em;
+}
+
+.containerCreateProduct {
+    .containerButton {
+        a {
+            display: block;
+            margin: 1em;
+        }
+    }
+}
+
+.mainPrecios, .ContainerListPrecio {
     .containerPrecios {
         .table_precios {
             width: 100%;
@@ -111,21 +150,22 @@ footer {
 
 // Create Product
 
+.containerContentCreate {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .containerFormCreate {
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
     margin: 0 auto;
     box-sizing: content-box;
     .contentHeaderCreate {
         background-color: #2B2B2B;
         color: white;
         height: 100%;
-        padding: 5em;
         h1 {
-            padding: 1em 0;
+            padding: 1em 0 .2em;
             font-size: 2em;
         }
         p {
@@ -134,8 +174,7 @@ footer {
     }
     form {
         background-color: rgb(232, 232, 232);
-        width: 70%;
-        padding: 2em 5em;
+        padding: 3em;
         input, select {
             display: block;
             padding: .5em 1em;
@@ -164,11 +203,16 @@ footer {
         }
     }
 }
-
+.containerSectionUpdate {
+    .containerButton {
+        padding: 2em 0;
+        a {
+            margin: 1em;
+        }
+    }
+}
 .containerButton {
     text-align: center;
-    padding: 1em;
-    margin: 1em;
     a {
         text-align: center;
         text-transform: uppercase;
@@ -179,5 +223,53 @@ footer {
     a:hover {
         background-color: $colorPrincipal;
         color: $colorSecundario;
+    }
+}
+
+// Update Datos
+.containerContentUpdate {
+    .headerUpdateProduct {
+        text-align: center;
+        padding: 2em;
+        h2 {
+            font-size: 3em;
+
+        }
+    }
+}
+
+.ContainerListPrecioUpdate {
+    background-color: #ededed;
+}
+
+.containerFormUpdate {
+    padding: 1em;
+    .containerModalEdit {
+        form {
+            background-color: #ededed;
+            text-align: center;
+            input, select {
+                padding: 1em;
+                border: none;
+            }
+            button {
+                @include btnRikatas();
+                font-weight: bold;
+                font-size: 1em;
+            }
+            button:hover {
+                background-color: $colorPrincipal;
+                color: $colorSecundario;
+            }
+        }
+    }
+}
+
+.contentLabel {
+    padding: 1em;
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    label {
+        padding: 1em;
     }
 }

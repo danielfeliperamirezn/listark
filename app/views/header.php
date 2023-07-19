@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Lista Mayorista</title>
     <link href="/listadepreciosrikatas/app/src/css/style.css" rel="stylesheet">
-
+    <script src="../src/js/app.js"></script>
 </head>
 <body>
     <header>
