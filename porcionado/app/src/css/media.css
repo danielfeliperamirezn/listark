@@ -1,0 +1,33 @@
+@media (max-width: 700px) {
+  .mainCentral {
+    width: 100%;
+    margin-top: 1em;
+  }
+  tr {
+    font-size: 10px;
+  }
+  td {
+    font-size: 10px !important;
+  }
+  thead tr th {
+    padding: 0 !important;
+    font-size: 10px !important;
+  }
+  .type {
+    padding: 0.2em;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  header {
+    padding: 2em 0;
+  }
+  header .contentHeader h1 {
+    padding: 1em 0;
+  }
+  .containerPrecios {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+$colorPrincipal:  #2B2B2B;
+$colorSecundario: #DB9B4A;
+
+@font-face {
+    font-family: Bondriand;
+    src: url(../fonts/Bondrians.otf);
+}
+@font-face {
+    font-family: MarkBold;
+    src: url(../fonts/Mark-Regular.ttf);
+}
+@font-face {
+    font-family: MarkBlack;
+    src: url(../fonts/Mark-Black.ttf);
+}
+
+@mixin btnRikatas() {
+    background-color: $colorSecundario;
+    color: #2B2B2B;
+    padding: .5em 2em;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.type {
+    padding: .5em;
+    background-color: $colorPrincipal;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    h2 {
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+}
+// btn
+.btnUpdate {
+    @include btnRikatas();
+}
+.btnColor2 {
+    background-color: $colorPrincipal !important;
+    color: $colorSecundario !important;
+}
+.btnColor2:hover {
+    background-color: $colorSecundario !important;
+    color: $colorPrincipal !important;
+}
+
+.btnDelete {
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    padding: .5em 2em;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+h1, span, a, button {
+    font-family: Bondriand;
+}
+p, article, tbody tr td, input, label {
+    font-family: MarkBold;
+}
+
+thead tr th, h2, h3, h4 {
+    font-family: MarkBlack;
+}
+
+.mainCentral {
+    width: 1080px;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+header {
+    // background-image: url(../img/carnesrikatas.webp);
+    background-color: $colorPrincipal;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 1.5em;
+    box-sizing: content-box;
+    position: relative;
+    .contentLogo {
+        figure {
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+    .contentHeader {
+        text-transform: uppercase;
+        color: whitesmoke;
+        h1 {
+            padding: 1em;
+        }
+        span {
+            font-size: 2em;
+        }
+    }
+}
+
+.ContainerListPrecio, .containerCreateProduct {
+    padding: 1em;
+}
+
+.containerCreateProduct {
+    .containerButton {
+        a {
+            display: block;
+            margin: 1em;
+        }
+    }
+}
+.mainPrecios {
+    .containerTitle {
+        text-align: center;
+        padding: 1em;
+        p {
+            span {
+                font-size: 1.2em;
+            }
+        }
+    }
+} 
+
+// Index
+
+.containerButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    a {
+        @include btnRikatas();
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+    a:hover {
+        background-color: $colorPrincipal;
+        color: #DB9B4A;
+    }
+}
+
+.mainPrecios, .ContainerListPrecio {
+    
+    .containerPrecios {
+        .table_precios {
+            width: 100%;
+            text-align: center;
+            thead {
+                text-align: center;
+                margin: 0 auto;
+                tr {
+                    background-color: #DB9B4A;
+                    text-transform: uppercase;
+                    font-size: 1.5em;
+                    th {
+                        padding: .2em 1em;
+                        font-size: 13px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding: .5em 1em;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                    }
+                    td:last-child {
+                        color: #DB9B4A;
+                        font-weight: bold;
+                    }
+                }
+                tr:nth-child(odd) {
+                    background-color: #ffffff;
+                }
+                tr:nth-child(even) {
+                    background-color: #f1f1f1;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #2B2B2B;
+    padding: 1em;
+    text-align: center;
+    .contentSocialMedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// Create Product
+
+.containerContentCreate {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.containerFormCreate {
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: content-box;
+    .contentHeaderCreate {
+        background-color: #2B2B2B;
+        color: white;
+        height: 100%;
+        h1 {
+            padding: 1em 0 .2em;
+            font-size: 2em;
+        }
+        p {
+            padding: 1em 0;
+        }
+    }
+    form {
+        background-color: rgb(232, 232, 232);
+        padding: 3em;
+        input, select {
+            display: block;
+            padding: .5em 1em;
+            border: none;
+            border-bottom: 1em;
+            margin: 1em 0;
+            width: 90%;
+        }
+        input::focus {
+            border: 1px solid $colorSecundario
+        }
+        input::placeholder {
+            text-transform: uppercase;
+            color: $colorPrincipal;
+        }
+        input[type="submit"] {
+            background-color: $colorSecundario;
+            color: #2B2B2B; 
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #2B2B2B;
+            color: #DB9B4A;
+        }
+    }
+}
+.containerSectionUpdate {
+    .containerButton {
+        padding: 2em 0;
+        a {
+            margin: 1em;
+        }
+    }
+}
+.containerButton {
+    text-align: center;
+    a {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        @include btnRikatas();
+        font-size: 1.2em;
+    }
+    a:hover {
+        background-color: $colorPrincipal;
+        color: $colorSecundario;
+    }
+}
+
+// Update Datos
+.containerContentUpdate {
+    .headerUpdateProduct {
+        text-align: center;
+        padding: 2em;
+        h2 {
+            font-size: 1.5em;
+            text-transform: uppercase;
+
+        }
+    }
+}
+
+.ContainerListPrecioUpdate {
+    .table_precios {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        thead {
+            text-align: center;
+            margin: 0 auto;
+            tr {
+                background-color: #DB9B4A;
+                text-transform: uppercase;
+                font-size: 1.5em;
+                th {
+                    padding: .5em 1em;
+                    font-size: .7em;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    input, select {
+                        padding: .5em;
+                        border: none;
+                        border: 1px solid $colorSecundario
+                    }
+                    input[type="submit"] {
+                        @include btnRikatas();
+                        font-weight: bold;
+                        font-size: 1em;
+                    }
+                    input[type="submit"]:hover {
+                        background-color: $colorPrincipal;
+                        color: $colorSecundario;
+                    }
+                }
+                td {
+                    padding: 1em;
+                    text-transform: uppercase;
+                }
+                td:last-child {
+                    color: #DB9B4A;
+                    font-family: MarkBlack;
+                }
+            }
+            tr:nth-child(odd) {
+                background-color: #ffffff;
+            }
+            tr:nth-child(even) {
+                background-color: #f1f1f1;
+            }
+        }
+    }
+    .contentRegisterDate {
+        margin: 1em;
+        text-align: center;
+        .contentHeader {
+            p {
+                text-transform: uppercase;
+            }
+        }
+        form {
+            div {
+                margin: 1em;
+                display: inline-block;
+                input, select {
+                    padding: .5em;
+                    border: none;
+                    border: 1px solid $colorSecundario
+                }    
+                input[type="submit"] {
+                    @include btnRikatas();
+                    font-weight: bold;
+                    font-size: 1em;
+                }
+                input[type="submit"]:hover {
+                    background-color: $colorPrincipal;
+                    color: $colorSecundario;
+                }
+            }
+        }
+    }
+}
+
+.containerFormUpdate {
+    padding: 1em;
+    .containerModalEdit {
+        
+    }
+}
+
+.contentLabel {
+    padding: 1em;
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    label {
+        padding: 1em;
+    }
+}
+
+// Footer
+footer {
+    padding: 1em;
+    margin-top: 3em;
+    p {
+        text-transform: uppercase;
+        color: white;
+    }
+}
