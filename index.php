@@ -1,15 +1,24 @@
 <?php
+
     include_once './app/config.php';
     include_once './app/views/header.php';
 
-    $res = $db->query('SELECT * FROM productos WHERE linea_producto = "Res"');
-    $cerdo = $db->query('SELECT * FROM productos WHERE linea_producto = "cerdo"');
-    $frias = $db->query('SELECT * FROM productos WHERE linea_producto = "carnes frias"');
-    $premium = $db->query('SELECT * FROM productos WHERE linea_producto = "cortes premium"');
+    $res = $db->query('SELECT * FROM productos WHERE linea_producto = "Res" AND estado = "activo"  ORDER BY id DESC');
+    $cerdo = $db->query('SELECT * FROM productos WHERE linea_producto = "cerdo"  AND estado = "activo"  ORDER BY id DESC');
+    $frias = $db->query('SELECT * FROM productos WHERE linea_producto = "carnes frias"  AND estado = "activo"  ORDER BY id DESC');
+    $premium = $db->query('SELECT * FROM productos WHERE linea_producto = "cortes premium"  AND estado = "activo"  ORDER BY id DESC');
+    $date = $db->query('SELECT * FROM registros ORDER BY id DESC LIMIT 1;');
 
+    while ($fecha = $date->fetch(PDO::FETCH_ASSOC)) {
+        $fechaFinal = $fecha['fecha_valida'];
+    }
 
 ?>
-    <section class="mainPrecios">
+    <section class="mainPrecios mainCentral">
+        <div class="containerTitle">    
+            <p>Esta lista de precios está sujeta a cambios </p>
+            <p>Vigencia Hasta: <span> <?php echo $fechaFinal ?> </span> </p>
+        </div>
         <div class="containerPrecios">
             <table class="table_precios">
                 <thead>
@@ -32,7 +41,11 @@
                         <td><?php echo $row['codigo_producto']; ?></td>
                         <td><?php echo $row['nombre_producto']; ?></td>
                         <td><?php echo $row['categoria_producto']; ?></td>
-                        <td>$<?php echo $row['precio']; ?></td>
+                        <?php 
+                            $conver = $row['precio']; 
+                            $precio = number_format($conver);
+                        ?>
+                        <td>$<?php echo $precio ?></td>
                     </tr>
                     <?php
                         }
@@ -44,7 +57,6 @@
                     <tr>
                         <th>Código del producto</th>
                         <th>Nombre del Producto</th>
-                        <th>Línea del Producto</th>
                         <th>Cateogría del producto</th>
                         <th>Precio</th>
                     </tr>
@@ -60,9 +72,12 @@
                         
                         <td><?php echo $row['codigo_producto']; ?></td>
                         <td><?php echo $row['nombre_producto']; ?></td>
-                        <td><?php echo $row['linea_producto']; ?></td>
                         <td><?php echo $row['categoria_producto']; ?></td>
-                        <td>$<?php echo $row['precio']; ?></td>
+                        <?php 
+                            $conver = $row['precio']; 
+                            $precio = number_format($conver);
+                        ?>
+                        <td>$<?php echo $precio ?></td>
                     </tr>
                     <?php
                         }
@@ -74,7 +89,6 @@
                     <tr>
                         <th>Código del producto</th>
                         <th>Nombre del Producto</th>
-                        <th>Línea del Producto</th>
                         <th>Cateogría del producto</th>
                         <th>Precio</th>
                     </tr>
@@ -90,9 +104,12 @@
                         
                         <td><?php echo $row['codigo_producto']; ?></td>
                         <td><?php echo $row['nombre_producto']; ?></td>
-                        <td><?php echo $row['linea_producto']; ?></td>
                         <td><?php echo $row['categoria_producto']; ?></td>
-                        <td>$<?php echo $row['precio']; ?></td>
+                        <?php 
+                            $conver = $row['precio']; 
+                            $precio = number_format($conver);
+                        ?>
+                        <td>$<?php echo $precio ?></td>
                     </tr>
                     <?php
                         }
@@ -105,7 +122,6 @@
                         <th>Código del producto</th>
                         <th>Nombre del Producto</th>
                         <th>Línea del Producto</th>
-                        <th>Cateogría del producto</th>
                         <th>Precio</th>
                     </tr>
                 </thead>
@@ -120,9 +136,12 @@
                         
                         <td><?php echo $row['codigo_producto']; ?></td>
                         <td><?php echo $row['nombre_producto']; ?></td>
-                        <td><?php echo $row['linea_producto']; ?></td>
                         <td><?php echo $row['categoria_producto']; ?></td>
-                        <td>$<?php echo $row['precio']; ?></td>
+                        <?php 
+                            $conver = $row['precio']; 
+                            $precio = number_format($conver);
+                        ?>
+                        <td>$<?php echo $precio ?></td>
                     </tr>
                     <?php
                         }
@@ -133,6 +152,8 @@
         <div class="actions">
             <a href="./app/views/create.php">Create new record</a>
             <a href="./app/views/update.php">Update record</a>
-            <a href="./app/views/delete.php">Delete record</a>
         </div>
     </section>
+<?php
+    include_once './app/views/footer.php';
+?>
