@@ -24,6 +24,10 @@
   header .contentHeader h1 {
     padding: 1em 0;
   }
+  .containerPrecios {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=media.css.map */

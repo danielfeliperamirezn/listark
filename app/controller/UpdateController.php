@@ -14,11 +14,11 @@
 
     if ($action == 'Deshabilitar') {
         $estado = "deshabilitado";
-        $stmt = $db->prepare('UPDATE productos SET codigo_producto = :codigo_producto, nombre_producto = :nombre_producto, linea_producto = 
+        $stmt = $db->prepare('UPDATE mayorista SET codigo_producto = :codigo_producto, nombre_producto = :nombre_producto, linea_producto = 
         :linea_producto, categoria_producto = :categoria_producto, precio = :precio, estado = :estado WHERE id = :id');
     } else if ($action == 'Guardar') {
         $estado = "activo";
-        $stmt = $db->prepare('UPDATE productos SET codigo_producto = :codigo_producto, nombre_producto = :nombre_producto, linea_producto = 
+        $stmt = $db->prepare('UPDATE mayorista SET codigo_producto = :codigo_producto, nombre_producto = :nombre_producto, linea_producto = 
         :linea_producto, categoria_producto = :categoria_producto, precio = :precio, estado = :estado WHERE id = :id');
     }
 

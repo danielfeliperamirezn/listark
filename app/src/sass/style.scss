@@ -129,6 +129,23 @@ header {
             }
         }
     }
+} 
+
+// Index
+
+.containerButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    a {
+        @include btnRikatas();
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+    a:hover {
+        background-color: $colorPrincipal;
+        color: #DB9B4A;
+    }
 }
 
 .mainPrecios, .ContainerListPrecio {

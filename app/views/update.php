@@ -2,7 +2,7 @@
 
     include_once 'header.php';
     include_once '../config.php';
-    $query = $db->query('SELECT * FROM productos ORDER BY id DESC');
+    $query = $db->query('SELECT * FROM mayorista ORDER BY id DESC');
 
 ?>
 

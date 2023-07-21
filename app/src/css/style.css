@@ -114,6 +114,26 @@ header .contentHeader span {
   font-size: 1.2em;
 }
 
+.containerButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.containerButtons a {
+  background-color: #DB9B4A;
+  color: #2B2B2B;
+  padding: 0.5em 2em;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.containerButtons a:hover {
+  background-color: #2B2B2B;
+  color: #DB9B4A;
+}
+
 .mainPrecios .containerPrecios .table_precios, .ContainerListPrecio .containerPrecios .table_precios {
   width: 100%;
   text-align: center;

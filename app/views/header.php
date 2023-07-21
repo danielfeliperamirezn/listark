@@ -1,3 +1,9 @@
+<?php 
+
+    $carpeta = __FILE__;
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +12,7 @@
     <link rel="icon" href="https://carnesrikatas.com/wp-content/uploads/2022/12/cropped-rk-Negro-min-1-convert.io_-180x180.webp">
     <link href="/listadepreciosrikatas/app/src/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="/listadepreciosrikatas/app/src/css/media.css">
-    <title>Lista Mayorista</title>
+    <title> Lista de Precios</title>
 </head>
 <body>
     <header>
@@ -16,7 +22,7 @@
             </figure>
         </div>
         <div class="contentHeader">
-            <h1>Lista de Precios  - Mayoristas</h1>
+            <h1> Lista de Precios </h1>
         </div>
     </header>
     <main class="">
