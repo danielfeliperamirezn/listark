@@ -119,7 +119,7 @@ header .contentHeader span {
   align-items: center;
   justify-content: space-evenly;
 }
-.containerButtons a {
+.containerButtons .containerLink a {
   background-color: #DB9B4A;
   color: #2B2B2B;
   padding: 0.5em 2em;
@@ -128,10 +128,16 @@ header .contentHeader span {
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2em;
+  display: block;
+  margin: 1em 0;
+  text-align: center;
 }
-.containerButtons a:hover {
+.containerButtons .containerLink a:hover {
   background-color: #2B2B2B;
   color: #DB9B4A;
+}
+.containerButtons .containerLink a:lastChild {
+  background-color: #2B2B2B;
 }
 
 .mainPrecios .containerPrecios .table_precios, .ContainerListPrecio .containerPrecios .table_precios {
@@ -143,9 +149,10 @@ header .contentHeader span {
   margin: 0 auto;
 }
 .mainPrecios .containerPrecios .table_precios thead tr, .ContainerListPrecio .containerPrecios .table_precios thead tr {
-  background-color: #DB9B4A;
+  background-color: rgb(232, 232, 232);
   text-transform: uppercase;
   font-size: 1.5em;
+  color: #DB9B4A;
 }
 .mainPrecios .containerPrecios .table_precios thead tr th, .ContainerListPrecio .containerPrecios .table_precios thead tr th {
   padding: 0.2em 1em;
@@ -360,6 +367,24 @@ footer .contentSocialMedia {
 }
 .contentLabel label {
   padding: 1em;
+}
+
+.actions {
+  text-align: center;
+  margin: 2em;
+}
+.actions a {
+  background-color: #DB9B4A;
+  color: #2B2B2B;
+  padding: 0.5em 2em;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+.actions a:hover {
+  background-color: #2B2B2B;
+  color: #DB9B4A;
 }
 
 footer {

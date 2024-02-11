@@ -8,7 +8,7 @@
 
 <div class="containerSectionUpdate">
     <div class="containerButton">
-        <a href="/listadepreciosrikatas/index.php"> Lista de Precios Clientes </a>
+        <a href="/listadepreciosrikatas/expendio/expendio.php"> Lista de Precios Clientes </a>
         <a href="../views/create.php"> Crear Producto </a>
     </div>
 </div>

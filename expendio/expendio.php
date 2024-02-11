@@ -149,6 +149,11 @@
                 </tbody>
             </table>
         </div>
+        <div class="actions">
+            <a href="./app/views/create.php">Crear Registro</a>
+            <a href="./app/views/update.php">Actualizar Registro</a>
+            <a href="../index.php">Regresar al Inicio</a>
+        </div>
     </section>
 <?php
     include_once './app/views/footer.php';

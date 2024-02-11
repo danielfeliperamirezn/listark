@@ -149,10 +149,6 @@
                 </tbody>
             </table>
         </div>
-        <div class="actions">
-            <a href="./app/views/create.php">Create new record</a>
-            <a href="./app/views/update.php">Update record</a>
-        </div>
     </section>
 <?php
     include_once './app/views/footer.php';

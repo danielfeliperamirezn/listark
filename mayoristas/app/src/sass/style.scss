@@ -137,14 +137,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    a {
-        @include btnRikatas();
-        text-decoration: none;
-        font-size: 1.2em;
-    }
-    a:hover {
-        background-color: $colorPrincipal;
-        color: #DB9B4A;
+    .containerLink {
+        a {
+            @include btnRikatas();
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+            margin: 1em 0;
+            text-align: center;
+        }
+        a:hover {
+            background-color: $colorPrincipal;
+            color: #DB9B4A;
+        }
+        a:lastChild {
+            background-color: $colorPrincipal;
+        }
     }
 }
 
@@ -158,9 +166,10 @@ header {
                 text-align: center;
                 margin: 0 auto;
                 tr {
-                    background-color: #DB9B4A;
+                    background-color: rgb(232, 232, 232);
                     text-transform: uppercase;
                     font-size: 1.5em;
+                    color: $colorSecundario;
                     th {
                         padding: .2em 1em;
                         font-size: 13px;
@@ -389,6 +398,19 @@ footer {
     color: $colorSecundario;
     label {
         padding: 1em;
+    }
+}
+
+.actions {
+    text-align: center;
+    margin: 2em;
+    a {
+        @include btnRikatas();
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: $colorPrincipal;
+        color: #DB9B4A;
     }
 }
 

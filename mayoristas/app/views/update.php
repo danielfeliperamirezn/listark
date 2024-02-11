@@ -8,7 +8,7 @@
 
 <div class="containerSectionUpdate">
     <div class="containerButton">
-        <a href="/listadepreciosrikatas/index.php"> Lista de Precios Clientes </a>
+        <a href="/listadepreciosrikatas/mayoristas/mayoristas.php"> Lista de Precios Clientes </a>
         <a href="../views/create.php"> Crear Producto </a>
     </div>
 </div>
@@ -98,9 +98,8 @@
                 <div>
                     <label for="">¿Quien modificó?</label>
                     <select name="responsable" id="responsable">
+                        <option value="Nancy">Nancy Peña</option>
                         <option value="Melissa Rodriguez">Melissa Rodriguez</option>
-                        <option value="Nancy">Nancy</option>
-                        <option value="otros">otro</option>
                     </select>
                 </div>
                 <div>

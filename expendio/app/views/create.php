@@ -31,7 +31,7 @@
             </form>
         </div>
         <div class="containerButton">
-            <a href="../../"> Lista de Precios</a>
+            <a href="../../expendio.php"> Lista de Precios</a>
             <a href="../views/update.php"> Editar Productos </a>
         </div>
     </div>

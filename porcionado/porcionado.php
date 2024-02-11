@@ -3,10 +3,10 @@
     include_once './app/config.php';
     include_once './app/views/header.php';
 
-    $res = $db->query('SELECT * FROM expendio WHERE linea_producto = "Res" AND estado = "activo"  ORDER BY id DESC');
-    $cerdo = $db->query('SELECT * FROM expendio WHERE linea_producto = "cerdo"  AND estado = "activo"  ORDER BY id DESC');
-    $frias = $db->query('SELECT * FROM expendio WHERE linea_producto = "carnes frias"  AND estado = "activo"  ORDER BY id DESC');
-    $premium = $db->query('SELECT * FROM expendio WHERE linea_producto = "cortes premium"  AND estado = "activo"  ORDER BY id DESC');
+    $res = $db->query('SELECT * FROM porcionado WHERE linea_producto = "Res" AND estado = "activo"  ORDER BY id DESC');
+    $cerdo = $db->query('SELECT * FROM porcionado WHERE linea_producto = "cerdo"  AND estado = "activo"  ORDER BY id DESC');
+    $frias = $db->query('SELECT * FROM porcionado WHERE linea_producto = "carnes frias"  AND estado = "activo"  ORDER BY id DESC');
+    $premium = $db->query('SELECT * FROM porcionado WHERE linea_producto = "cortes premium"  AND estado = "activo"  ORDER BY id DESC');
     $date = $db->query('SELECT * FROM registros ORDER BY id DESC LIMIT 1;');
 
     while ($fecha = $date->fetch(PDO::FETCH_ASSOC)) {
@@ -148,6 +148,10 @@
                     ?>
                 </tbody>
             </table>
+        </div>
+        <div class="actions">
+            <a href="./app/views/create.php">Crear Registro</a>
+            <a href="./app/views/update.php">Actualizar Registro</a>
         </div>
     </section>
 <?php

@@ -31,7 +31,7 @@
             </form>
         </div>
         <div class="containerButton">
-            <a href="../../"> Lista de Precios</a>
+            <a href="../../mayoristas.php"> Lista de Precios</a>
             <a href="../views/update.php"> Editar Productos </a>
         </div>
     </div>
@@ -74,7 +74,6 @@
                     <tr>
                         <th>Código del producto</th>
                         <th>Nombre del Producto</th>
-                        <th>Línea del Producto</th>
                         <th>Cateogría del producto</th>
                         <th>Precio</th>
                     </tr>
@@ -90,7 +89,6 @@
                         
                         <td><?php echo $row['codigo_producto']; ?></td>
                         <td><?php echo $row['nombre_producto']; ?></td>
-                        <td><?php echo $row['linea_producto']; ?></td>
                         <td><?php echo $row['categoria_producto']; ?></td>
                         <?php 
                             $conver = $row['precio']; 
@@ -108,7 +106,6 @@
                     <tr>
                         <th>Código del producto</th>
                         <th>Nombre del Producto</th>
-                        <th>Línea del Producto</th>
                         <th>Cateogría del producto</th>
                         <th>Precio</th>
                     </tr>
@@ -124,7 +121,6 @@
                         
                         <td><?php echo $row['codigo_producto']; ?></td>
                         <td><?php echo $row['nombre_producto']; ?></td>
-                        <td><?php echo $row['linea_producto']; ?></td>
                         <td><?php echo $row['categoria_producto']; ?></td>
                         <?php 
                             $conver = $row['precio']; 
@@ -142,7 +138,6 @@
                     <tr>
                         <th>Código del producto</th>
                         <th>Nombre del Producto</th>
-                        <th>Línea del Producto</th>
                         <th>Cateogría del producto</th>
                         <th>Precio</th>
                     </tr>
@@ -158,7 +153,6 @@
                         
                         <td><?php echo $row['codigo_producto']; ?></td>
                         <td><?php echo $row['nombre_producto']; ?></td>
-                        <td><?php echo $row['linea_producto']; ?></td>
                         <td><?php echo $row['categoria_producto']; ?></td>
                         <?php 
                             $conver = $row['precio']; 
